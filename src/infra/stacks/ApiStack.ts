@@ -4,7 +4,7 @@ import {Bucket} from "aws-cdk-lib/aws-s3";
 import {LambdaIntegration, RestApi} from "aws-cdk-lib/aws-apigateway";
 
 interface ApiStackProps extends StackProps {
-  helloLambdaIntegration: LambdaIntegration;
+  spacesLambdaIntegration: LambdaIntegration;
 }
 
 export class ApiStack extends Stack {
@@ -14,6 +14,6 @@ export class ApiStack extends Stack {
     const api = new RestApi(this, 'SpacesApi')
     const spacesResource = api.root.addResource('spaces')
 
-    spacesResource.addMethod('GET', props.helloLambdaIntegration)
+    spacesResource.addMethod('GET', props.spacesLambdaIntegration)
   }
 }

@@ -10,11 +10,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.130",
     "@types/node": "^20.10.4",
     "aws-cdk": "^2.114.1",
     "aws-cdk-lib": "^2.114.1",
     "constructs": "^10.3.0",
+    "esbuild": "^0.19.9",
     "node-ts": "^6.0.1",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.470.0",
+    "@types/uuid": "^9.0.7",
+    "uuid": "^9.0.1"
   }
 }
